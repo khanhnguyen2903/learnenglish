@@ -55,14 +55,15 @@ function displayQuestion(question) {
 }
 
 // Create function to speak text
-function speak(message) {
-  var msg = new SpeechSynthesisUtterance(message);
-  var voices = window.speechSynthesis.getVoices();
-  msg.voice = voices[0];
-  window.speechSynthesis.speak(msg);
-}
+// function speak(message) {
+//   var msg = new SpeechSynthesisUtterance(message);
+//   var voices = window.speechSynthesis.getVoices();
+//   msg.voice = voices[0];
+//   window.speechSynthesis.speak(msg);
+// }
 speakButton.addEventListener("click", () => {
-  speak(question_word[i].answer);
+  //speak(question_word[i].answer);
+  responsiveVoice.speak(question_word[i].answer, "UK English Male");
 });
 
 displayQuestion(question_word[0]);
